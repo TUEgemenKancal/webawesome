@@ -3,7 +3,7 @@
   --primary-opacity: 1;
   --secondary-color: currentColor;
   --secondary-opacity: 0.4;
-
+  --rotate-deg: 0deg;
   box-sizing: content-box;
   display: inline-flex;
   align-items: center;
@@ -23,10 +23,24 @@
   height: 1em;
 }
 
+:host([wa-rotate-90]) svg {
+  transform: rotate(90deg);
+}
+
+:host([wa-flip-horizontal]) svg {
+  transform: scaleX(-1);
+}
+
+/* TODO: for 180 270 etc */
+/* TODO: flip attributes */
+/* TODO: custom degree */
+/* TODO: animations */
+
 svg {
   height: 1em;
   fill: currentColor;
   overflow: visible;
+  transform: rotate(var(--rotate-deg));
 
   /* Duotone colors with path-specific opacity fallback */
   path[data-duotone-primary] {

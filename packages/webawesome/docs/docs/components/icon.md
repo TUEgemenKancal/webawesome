@@ -9,6 +9,9 @@ Web Awesome comes bundled with over 2,000 free icons courtesy of [Font Awesome](
 
 ```html {.example}
 <wa-icon name="face-awesome" variant="light" label="Awesome" style="font-size: 2em;"></wa-icon>
+<wa-icon name="face-awesome" variant="light" wa-rotate-90 label="Awesome" style="font-size: 2em;"></wa-icon>
+<wa-icon name="face-awesome" variant="light" wa-flip-horizontal label="Awesome" style="font-size: 2em;"></wa-icon>
+<wa-icon name="face-awesome" variant="light" label="Awesome" style="font-size: 2em; --rotate-deg: 20deg"></wa-icon>
 ```
 
 :::info
