@@ -23,24 +23,43 @@
   height: 1em;
 }
 
+/* Rotate icon 90 degrees */
 :host([wa-rotate-90]) svg {
   transform: rotate(90deg);
 }
 
+/* Rotate icon 180 degrees */
+:host([wa-rotate-180]) svg {
+  transform: rotate(180deg);
+}
+
+/* Rotate icon 270 degrees */
+:host([wa-rotate-270]) svg {
+  transform: rotate(270deg);
+}
+
+/* Flip icon horizontal */
 :host([wa-flip-horizontal]) svg {
   transform: scaleX(-1);
 }
 
-/* TODO: for 180 270 etc */
-/* TODO: flip attributes */
-/* TODO: custom degree */
+/* Flip icon vertical */
+:host([wa-flip-vertical]) svg {
+  transform: scaleY(-1);
+}
+
+/* Flip icon horizontal and vertical */
+:host([wa-flip-both]) svg {
+  transform: scale(-1, -1);
+}
+
 /* TODO: animations */
 
 svg {
   height: 1em;
   fill: currentColor;
   overflow: visible;
-  transform: rotate(var(--rotate-deg));
+  transform: rotate(var(--rotate-deg), unset);
 
   /* Duotone colors with path-specific opacity fallback */
   path[data-duotone-primary] {

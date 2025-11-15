@@ -84,10 +84,19 @@ export default class WaIcon extends WebAwesomeElement {
   /** The name of a registered custom icon library. */
   @property({ reflect: true }) library = 'default';
 
+  /** Static rotate Icons  */
   @property({ attribute: 'wa-rotate-90', type: Boolean, reflect: true }) rotate90 = false;
+  @property({ attribute: 'wa-rotate-180', type: Boolean, reflect: true }) rotate180 = false;
+  @property({ attribute: 'wa-rotate-270', type: Boolean, reflect: true }) rotate270 = false;
+
+  /** Custom Rotate Icons */
+  @property({ attribute: 'wa-rotate-deg', type: Number, reflect: true }) rotateDeg?: number;
+
+  /** Flip Icons  */
   @property({ attribute: 'wa-flip-horizontal', type: Boolean, reflect: true }) flipHorizontal = false;
-  @property({ attribute: 'wa-rotate-deg', type: Number, reflect: true }) rotateDeg = 0;
-  
+  @property({ attribute: 'wa-flip-vertical', type: Boolean, reflect: true }) flipVertical = false;
+  @property({ attribute: 'wa-flip-both', type: Boolean, reflect: true }) flipBoth = false;
+
   connectedCallback() {
     super.connectedCallback();
 

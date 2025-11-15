@@ -251,6 +251,15 @@ describe('<wa-icon>', () => {
           expect(ev).to.exist;
         });
       });
+
+      describe('Rotating and Flipping', () => {
+        it.only('rotate icon 90 degree', async () => {
+          const el = await fixture<WaIcon>(
+            html`<wa-icon library="test-library" name="test-icon1" wa-rotate-90></wa-icon>`,
+          );
+          expect(el.getAttribute('wa-rotate-90')).to.exist;
+        });
+      });
       /* eslint-enable */
     });
   }

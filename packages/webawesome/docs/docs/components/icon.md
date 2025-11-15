@@ -9,9 +9,6 @@ Web Awesome comes bundled with over 2,000 free icons courtesy of [Font Awesome](
 
 ```html {.example}
 <wa-icon name="face-awesome" variant="light" label="Awesome" style="font-size: 2em;"></wa-icon>
-<wa-icon name="face-awesome" variant="light" wa-rotate-90 label="Awesome" style="font-size: 2em;"></wa-icon>
-<wa-icon name="face-awesome" variant="light" wa-flip-horizontal label="Awesome" style="font-size: 2em;"></wa-icon>
-<wa-icon name="face-awesome" variant="light" label="Awesome" style="font-size: 2em; --rotate-deg: 20deg"></wa-icon>
 ```
 
 :::info
@@ -127,6 +124,38 @@ With auto-width<br />
   <wa-icon auto-width family="solid" name="ruler-horizontal" style="background: lightsalmon;"></wa-icon>
   <wa-icon auto-width family="solid" name="airplay" style="background: lightsalmon;"></wa-icon>
 </div>
+```
+
+### Rotating & Flipping
+
+Icons can be rotated or flipped using predefined attributes or the `--rotate-deg` CSS variable.
+
+#### Rotation Attributes
+
+Use rotation attributes for common angles: 90° `wa-rotate-90`, 180° `wa-rotate-180`, or 270° `wa-rotate-270`.
+
+```html {.example}
+<wa-icon name="snowboarding" variant="light" wa-rotate-90 label="Awesome" style="font-size: 2em;"></wa-icon>
+<wa-icon name="snowboarding" variant="light" wa-rotate-180 label="Awesome" style="font-size: 2em;"></wa-icon>
+<wa-icon name="snowboarding" variant="light" wa-rotate-270 label="Awesome" style="font-size: 2em;"></wa-icon>
+```
+
+#### Custom Rotation
+
+Use the CSS variable `--rotate-deg` for arbitrary rotation values.
+
+```html {.example}
+<wa-icon name="snowboarding" variant="light" style="font-size: 2em; --rotate-deg: 20deg;" label="Awesome"></wa-icon>
+<wa-icon name="snowboarding" variant="light" style="font-size: 2em; --rotate-deg: 210deg;" label="Awesome"></wa-icon>
+```
+
+#### Flipping
+Flip icons horizontally `wa-flip-horizontal`, vertically `wa-flip-vertical`, or both `wa-flip-both`.
+
+```html {.example}
+<wa-icon name="snowboarding" variant="light" wa-flip-horizontal label="Awesome" style="font-size: 2em;"></wa-icon>
+<wa-icon name="snowboarding" variant="light" wa-flip-vertical label="Awesome" style="font-size: 2em;"><wa-icon>
+<wa-icon name="snowboarding" variant="light" wa-flip-both label="Awesome" style="font-size: 2em;"></wa-icon>
 ```
 
 ### Colors
